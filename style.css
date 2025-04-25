@@ -1,10 +1,12 @@
+/* ベース設定 */
 body {
-  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-family: sans-serif;
   background-color: #ffe4e1;
   margin: 0;
   padding: 20px;
 }
 
+/* タイトル */
 h1 {
   text-align: center;
   background-color: #f8b8c9;
@@ -15,6 +17,7 @@ h1 {
   font-size: 36px;
 }
 
+/* ナビゲーション */
 .nav {
   text-align: center;
   margin-bottom: 30px;
@@ -32,11 +35,13 @@ h1 {
   border-color: #f06090;
 }
 
+/* セクション全体 */
 section {
   margin-bottom: 40px;
   padding: 10px;
 }
 
+/* セクション見出し */
 h2 {
   margin-top: 0;
   font-size: 24px;
@@ -45,16 +50,19 @@ h2 {
   padding-left: 10px;
 }
 
+/* 小見出し */
 h3 {
   color: #f06090;
   margin-top: 20px;
 }
 
+/* 段落 */
 p {
   margin: 10px 0;
   line-height: 1.6;
 }
 
+/* すべての画像の基本スタイル */
 img {
   max-width: 100%;
   border-radius: 10px;
@@ -62,12 +70,12 @@ img {
   margin-bottom: 10px;
 }
 
-.single-img {
-  width: 300px;
-  display: block;
-  margin: 10px 0;
+/* ポケモンの画像（小さめ：1/4） */
+.img-small {
+  width: 25%;
 }
 
+/* 通常のギャラリー（旅行・愛犬：1/2ずつ） */
 .gallery {
   display: flex;
   gap: 10px;
@@ -75,9 +83,10 @@ img {
 }
 
 .gallery img {
-  width: calc(45% - 10px);
+  width: 48%;
 }
 
+/* 行ってみたい国リスト */
 .country-list {
   list-style: none;
   padding-left: 0;
