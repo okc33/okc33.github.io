@@ -10,26 +10,97 @@ h1 {
   background-color: #f8b8c9;
   color: white;
   padding: 15px 0;
-  margin-bottom: 20px;
-  border-radius: 12px;
+  margin-bottom: 0;
+  border-radius: 12px 12px 0 0;
   font-size: 36px;
 }
 
-.nav {
+/* ▼ タイトル下の説明文 */
+.sub-header {
+  background-color: #f8b8c9;
   text-align: center;
-  margin-bottom: 30px;
+  padding: 5px 0 15px;
+  border-radius: 0 0 12px 12px;
+  margin-bottom: 20px;
 }
-.nav a {
-  display: inline-block;
-  margin: 0 12px;
+
+.sub-header hr {
+  width: 50%;
+  border: none;
+  border-top: 1px solid white;
+  margin: 8px auto;
+}
+
+.sub-header p {
+  color: white;
+  margin: 0;
+  font-size: 14px;
+}
+
+/* ▼ ナビゲーション固定＋デザイン */
+.nav {
+  background-color: #fff0f5;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-list li {
+  position: relative;
+}
+
+.nav-list > li > a {
+  display: block;
+  padding: 14px 16px;
   text-decoration: none;
   color: #2196f3;
   font-weight: bold;
-  border-bottom: 2px solid transparent;
-  transition: border 0.2s;
+  transition: background-color 0.2s;
 }
-.nav a:hover {
-  border-color: #2196f3;
+
+.nav-list > li > a:hover,
+.nav-list > li > a.active {
+  background-color: #f8b8c9;
+  color: white;
+}
+
+/* ▼ ドロップダウン */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 140px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  border-radius: 4px;
+  padding: 0;
+  margin: 0;
+  top: 100%;
+  left: 0;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 10px 14px;
+  text-decoration: none;
+  color: #2196f3;
+  font-weight: normal;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #f0f8ff;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
 }
 
 section {
@@ -55,52 +126,15 @@ p {
   line-height: 1.6;
 }
 
+/* ▼ 画像：角なしに */
 img {
   max-width: 100%;
   margin-bottom: 10px;
+  border-radius: 0;
+  box-shadow: none;
 }
 
-/* 画像を全て1/4サイズに統一 */
-.img-small,
-.gallery img {
-  width: 23.5%;
-}
-
-.gallery {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-.country-list {
-  list-style: none;
-  padding-left: 0;
-}
-.country-list li {
-  margin-bottom: 10px;
-  padding: 10px;
-  background-color: #fff8fb;
-  border-left: 4px solid #f8b8c9;
-  border-radius: 6px;
-}
-/* ナビ固定＋影付き */
-#navbar {
-  position: sticky;
-  top: 0;
-  background-color: #fff0f5;
-  padding: 10px 0;
-  z-index: 999;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-/* ナビリンクの強調（hoverとactive両方） */
-.nav a.active,
-.nav a:hover {
-  border-color: #2196f3;
-  color: #0d47a1;
-}
-
-/* 旅行写真をカード風に */
+/* ▼ 旅行写真：カード風に横4枚 */
 .gallery-card {
   display: flex;
   flex-wrap: nowrap;
@@ -125,62 +159,28 @@ img {
   font-size: 14px;
   margin: 0;
 }
-/* ▼ ナビゲーションのドロップダウン */
-.dropdown {
-  display: inline-block;
-  position: relative;
+
+/* ▼ その他スタイル */
+.img-small,
+.gallery img {
+  width: 23.5%;
 }
 
-.dropbtn {
-  color: #2196f3;
-  font-weight: bold;
-  text-decoration: none;
-  margin: 0 12px;
-  border-bottom: 2px solid transparent;
-  cursor: pointer;
+.gallery {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: white;
-  min-width: 120px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  z-index: 1000;
+.country-list {
+  list-style: none;
+  padding-left: 0;
 }
 
-.dropdown-content a {
-  display: block;
-  padding: 8px 12px;
-  text-decoration: none;
-  color: #2196f3;
-  font-weight: normal;
-}
-
-.dropdown-content a:hover {
-  background-color: #f0f8ff;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-/* ▼ タイトル下の説明文 */
-.sub-header {
-  background-color: #f8b8c9;
-  text-align: center;
-  padding: 5px 0;
-}
-
-.sub-header hr {
-  width: 50%;
-  border: none;
-  border-top: 1px solid white;
-  margin: 8px auto;
-}
-
-.sub-header p {
-  color: white;
-  margin: 0;
-  font-size: 14px;
+.country-list li {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #fff8fb;
+  border-left: 4px solid #f8b8c9;
+  border-radius: 6px;
 }
