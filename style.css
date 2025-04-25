@@ -23,13 +23,13 @@ h1 {
   display: inline-block;
   margin: 0 12px;
   text-decoration: none;
-  color: #f06090;
+  color: #2196f3;
   font-weight: bold;
   border-bottom: 2px solid transparent;
   transition: border 0.2s;
 }
 .nav a:hover {
-  border-color: #f06090;
+  border-color: #2196f3;
 }
 
 section {
