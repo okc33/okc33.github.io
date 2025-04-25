@@ -65,7 +65,7 @@ img {
 /* 画像を全て1/4サイズに統一 */
 .img-small,
 .gallery img {
-  width: 25%;
+  width: 23.5%;
 }
 
 .gallery {
