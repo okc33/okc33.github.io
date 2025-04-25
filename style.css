@@ -185,9 +185,15 @@ img {
   border-radius: 6px;
 }
 /* ▼ 犬の写真だけ丸くする */
+/* 犬の写真だけ丸くする（共通） */
 .circle-img {
-  aspect-ratio: 1 / 1; /* 正方形を保つ */
-  width: 200px;         /* 幅だけ指定、高さは自動で揃う */
+  aspect-ratio: 1 / 1;
+  width: 200px;
   border-radius: 50%;
-  object-fit: cover;    /* はみ出しを防いでいい感じに切り取る */
+  object-fit: cover;
+}
+
+/* dog2専用：ちょっと上を中心にする */
+.shift-up {
+  object-position: center top 30%;
 }
