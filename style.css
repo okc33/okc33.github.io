@@ -186,8 +186,8 @@ img {
 }
 /* ▼ 犬の写真だけ丸くする */
 .circle-img {
+  aspect-ratio: 1 / 1; /* 正方形を保つ */
+  width: 200px;         /* 幅だけ指定、高さは自動で揃う */
   border-radius: 50%;
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
+  object-fit: cover;    /* はみ出しを防いでいい感じに切り取る */
 }
