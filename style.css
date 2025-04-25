@@ -184,3 +184,10 @@ img {
   border-left: 4px solid #f8b8c9;
   border-radius: 6px;
 }
+/* ▼ 犬の写真だけ丸くする */
+.circle-img {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
