@@ -57,8 +57,6 @@ p {
 
 img {
   max-width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   margin-bottom: 10px;
 }
 
@@ -105,21 +103,25 @@ img {
 /* 旅行写真をカード風に */
 .gallery-card {
   display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  gap: 10px;
 }
 
 .gallery-card .card {
-  background: white;
-  width: 48%;
-  padding: 10px;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-  box-sizing: border-box;
+  width: 23.5%;
+  padding: 0;
+  background: none;
+  box-shadow: none;
 }
 
 .gallery-card .card img {
   width: 100%;
-  border-radius: 8px;
-  margin-bottom: 8px;
+  margin-bottom: 5px;
+}
+
+.gallery-card .card p {
+  text-align: center;
+  font-size: 14px;
+  margin: 0;
 }
