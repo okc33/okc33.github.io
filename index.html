@@ -7,14 +7,28 @@
 </head>
 <body>
 
-  <h1>練習サイト</h1>
+ <h1>練習サイト</h1>
+<div class="sub-header">
+  <hr>
+  <p>ポートフォリオサイトです</p>
+</div>
+
 
   <nav class="nav" id="navbar">
   <a href="#intro">自己紹介</a>
-  <a href="#hobby">趣味</a>
+
+  <div class="dropdown">
+    <a href="#hobby" class="dropbtn">趣味 ▼</a>
+    <div class="dropdown-content">
+      <a href="#pokemon">ポケモン</a>
+      <a href="#travel-hobby">旅行</a>
+    </div>
+  </div>
+
   <a href="#dog">愛犬</a>
   <a href="#travel">行きたい国</a>
 </nav>
+
 
 
   <section id="intro">
@@ -23,15 +37,17 @@
   </section>
 
   <section id="hobby">
-    <h2>趣味</h2>
+  <h2>趣味</h2>
 
-    <h3>ポケモン</h3>
-    <p>今は剣盾DLCをやっています。ハロウィンにUSJに行きました。</p>
-    <img src="images/pokemon.jpg" alt="ポケモンの画像" class="img-small">
+  <h3 id="pokemon">ポケモン</h3>
+  <p>今は剣盾DLCをやっています。ハロウィンにUSJに行きました。</p>
+  <img src="images/pokemon.jpg" alt="ポケモンの画像" class="img-small">
 
+  <h3 id="travel-hobby">旅行</h3>
+  <p>一人旅が好きです。一人旅の写真です。</p>
+  <!-- ここに gallery-card を続けて書く -->
+</section>
 
-   <h3>旅行</h3>
-<p>一人旅が好きです。一人旅の写真です。</p>
 <div class="gallery-card">
   <div class="card">
     <img src="images/travel1.jpg" alt="旅行写真1">
