@@ -9,12 +9,13 @@
 
   <h1>練習サイト</h1>
 
-  <nav class="nav">
-    <a href="#intro">自己紹介</a>
-    <a href="#hobby">趣味</a>
-    <a href="#dog">愛犬</a>
-    <a href="#travel">行きたい国</a>
-  </nav>
+  <nav class="nav" id="navbar">
+  <a href="#intro">自己紹介</a>
+  <a href="#hobby">趣味</a>
+  <a href="#dog">愛犬</a>
+  <a href="#travel">行きたい国</a>
+</nav>
+
 
   <section id="intro">
     <h2>自己紹介</h2>
@@ -30,13 +31,26 @@
 
 
     <h3>旅行</h3>
-    <p>一人旅が好きです。一人旅の写真です。</p>
-    <div class="gallery">
-  <img src="images/travel1.jpg" alt="旅行写真1">
-  <img src="images/travel2.jpg" alt="旅行写真2">
-  <img src="images/travel3.jpg" alt="旅行写真3">
-  <img src="images/travel4.jpg" alt="旅行写真4">
-    </div>
+<p>一人旅が好きです。一人旅の写真です。</p>
+<div class="gallery-card">
+  <div class="card">
+    <img src="images/travel1.jpg" alt="旅行写真1">
+    <p>旅行1のコメント</p>
+  </div>
+  <div class="card">
+    <img src="images/travel2.jpg" alt="旅行写真2">
+    <p>旅行2のコメント</p>
+  </div>
+  <div class="card">
+    <img src="images/travel3.jpg" alt="旅行写真3">
+    <p>旅行3のコメント</p>
+  </div>
+  <div class="card">
+    <img src="images/travel4.jpg" alt="旅行写真4">
+    <p>旅行4のコメント</p>
+  </div>
+</div>
+
 
   </section>
 
@@ -59,6 +73,31 @@
       <li><strong>スペイン</strong> – パエリア食べたい。グラナダ、コルドバあたり行きたい</li>
     </ul>
   </section>
+
+  <script>
+  const navLinks = document.querySelectorAll('.nav a');
+  const sections = document.querySelectorAll('section');
+
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(section => {
+      const top = window.scrollY;
+      const offset = section.offsetTop - 100;
+      const height = section.offsetHeight;
+      if (top >= offset && top < offset + height) {
+        current = section.getAttribute('id');
+      }
+    });
+
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href') === `#${current}`) {
+        link.classList.add('active');
+      }
+    });
+  });
+</script>
+
 
 </body>
 </html>
