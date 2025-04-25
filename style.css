@@ -85,3 +85,41 @@ img {
   border-left: 4px solid #f8b8c9;
   border-radius: 6px;
 }
+/* ナビ固定＋影付き */
+#navbar {
+  position: sticky;
+  top: 0;
+  background-color: #fff0f5;
+  padding: 10px 0;
+  z-index: 999;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* ナビリンクの強調（hoverとactive両方） */
+.nav a.active,
+.nav a:hover {
+  border-color: #2196f3;
+  color: #0d47a1;
+}
+
+/* 旅行写真をカード風に */
+.gallery-card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.gallery-card .card {
+  background: white;
+  width: 48%;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  box-sizing: border-box;
+}
+
+.gallery-card .card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
