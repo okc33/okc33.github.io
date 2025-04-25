@@ -191,9 +191,11 @@ img {
   width: 200px;
   border-radius: 50%;
   object-fit: cover;
+  transform: scale(1.15);
+  overflow: hidden;
 }
 
-/* dog2専用：ちょっと上を中心にする */
 .shift-up {
-  object-position: center top 45%;
+  object-position: center top 30%;
 }
+
