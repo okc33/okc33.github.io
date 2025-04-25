@@ -184,17 +184,16 @@ img {
   border-left: 4px solid #f8b8c9;
   border-radius: 6px;
 }
-/* ▼ 犬の写真だけ丸くする */
+
 /* 犬の写真だけ丸くする（共通） */
 .circle-img {
   aspect-ratio: 1 / 1;
   width: 200px;
   border-radius: 50%;
   object-fit: cover;
-  transform: scale(1.15);
-  overflow: hidden;
 }
 
+/* dog2専用：ちょっと上寄りに */
 .shift-up {
   object-position: center top 30%;
 }
