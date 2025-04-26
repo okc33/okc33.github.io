@@ -116,11 +116,6 @@ h2 {
   padding-left: 10px;
 }
 
-h3 {
-  color: #f06090;
-  margin-top: 20px;
-}
-
 p {
   margin: 10px 0;
   line-height: 1.6;
@@ -201,9 +196,8 @@ img {
 .shift-up {
   object-position: center top 30%;
 }
-/* h3の色をもっと薄いピンクに */
 h3 {
-  color: #f9a8c0;
+  color: #2196f3;
   margin-top: 20px;
 }
 
