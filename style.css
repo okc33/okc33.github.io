@@ -228,4 +228,25 @@ h3 {
 .circle-img:hover {
   transform: scale(1.25);
 }
+.gallery {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.circle-img {
+  aspect-ratio: 1 / 1;
+  width: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  transform: scale(1.1);
+  overflow: hidden;
+  border: 4px solid white;
+  transition: transform 0.3s ease;
+}
+
+.circle-img:hover {
+  transform: scale(1.25);
+}
 
