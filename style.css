@@ -250,11 +250,11 @@ h3 {
   transform: scale(1.25);
 }
 .move-left {
-  transform: translateX(-20px) scale(1.1);
+  transform: translateX(-30px) scale(1.1);
 }
 
 /* ホバー時はscaleだけ大きくする */
 .move-left:hover {
-  transform: translateX(-20px) scale(1.25);
+  transform: translateX(-30px) scale(1.25);
 }
 
