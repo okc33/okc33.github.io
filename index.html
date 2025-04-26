@@ -15,6 +15,12 @@
 
 
  <nav class="nav" id="navbar">
+  <div class="hamburger" id="hamburger">☰</div>
+  <ul class="nav-list">
+    <!-- ここにliたち（自己紹介、趣味、愛犬、行きたい国）がある -->
+  </ul>
+</nav>
+
   <ul class="nav-list">
     <li><a href="#intro">自己紹介</a></li>
 
@@ -97,6 +103,7 @@
   </section>
 
   <script>
+  // ナビの現在位置色変えるやつ（あなたが元々入れてたやつ）
   const navLinks = document.querySelectorAll('.nav a');
   const sections = document.querySelectorAll('section');
 
@@ -118,7 +125,16 @@
       }
     });
   });
+
+  // ▼ ハンバーガーメニューの開閉動き
+  const hamburger = document.getElementById('hamburger');
+  const navList = document.querySelector('.nav-list');
+
+  hamburger.addEventListener('click', () => {
+    navList.classList.toggle('active');
+  });
 </script>
+
 
 
 </body>
