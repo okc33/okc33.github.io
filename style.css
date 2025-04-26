@@ -201,4 +201,37 @@ img {
 .shift-up {
   object-position: center top 30%;
 }
+/* h3の色をもっと薄いピンクに */
+h3 {
+  color: #f9a8c0;
+  margin-top: 20px;
+}
+
+/* ドロップダウンリストマークを消す */
+.dropdown-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: white;
+  min-width: 140px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  border-radius: 4px;
+}
+
+/* 犬の丸画像（白ふち＋ふわっとホバー拡大） */
+.circle-img {
+  aspect-ratio: 1 / 1;
+  width: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  transform: scale(1.15);
+  overflow: hidden;
+  border: 4px solid white;
+  transition: transform 0.3s ease;
+}
+
+/* ホバー時にさらにふわっと拡大 */
+.circle-img:hover {
+  transform: scale(1.25);
+}
 
