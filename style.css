@@ -156,9 +156,13 @@ img {
 
 .gallery-card .card p {
   text-align: center;
-  font-size: 14px;
-  margin: 0;
+  font-size: 15px;
+  margin: 8px 0 0 0;
+  font-weight: 600;
+  font-family: "Segoe UI", "Helvetica Neue", "Arial", sans-serif;
+  color: #555;
 }
+
 
 /* ▼ その他スタイル */
 .img-small,
