@@ -2,32 +2,43 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>okc33 - Portfolio</title>
+  <title>okc33 - 自己紹介</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="inner">
-      <h1 class="logo">okc33</h1>
-      <nav class="gnav">
-        <ul class="gnav__menu">
-          <li><a href="./">自己紹介</a></li>
-          <li><a href="hobby.html">趣味</a></li>
-          <li><a href="dog.html">愛犬</a></li>
-          <li><a href="travel.html">行きたい国</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+<h1>okc33</h1>
+<div class="sub-header">
+  <hr>
+  <p>ポートフォリオサイトです</p>
+</div>
 
-  <main class="content">
-    <section class="fadein">
-      <h2 class="section-title">自己紹介</h2>
-      <p>経営情報システムを学びます。</p>
-    </section>
-  </main>
+<nav class="nav" id="navbar">
+  <div class="hamburger" id="hamburger">☰</div>
+  <ul class="nav-list">
+    <li><a href="./">自己紹介</a></li>
+    <li class="dropdown">
+      <a href="hobby.html">趣味 ▼</a>
+      <ul class="dropdown-menu">
+        <li><a href="hobby.html#pokemon">ポケモン</a></li>
+        <li><a href="hobby.html#travel-hobby">旅行</a></li>
+      </ul>
+    </li>
+    <li><a href="dog.html">愛犬</a></li>
+    <li><a href="travel.html">行きたい国</a></li>
+  </ul>
+</nav>
 
-  <script src="main.js"></script>
+<section id="intro">
+  <h2>自己紹介</h2>
+   <p>経営情報システムを学びます。</p>
+</section>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const navList = document.querySelector('.nav-list');
+  hamburger.addEventListener('click', () => {
+    navList.classList.toggle('active');
+  });
+</script>
 </body>
 </html>
